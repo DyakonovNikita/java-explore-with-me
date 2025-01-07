@@ -9,7 +9,7 @@ services:
     depends_on:
       - stat-db
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://stats-db:5432/statDb
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://stat-db:5432/statDb
       - SPRING_DATASOURCE_USERNAME=dbuser
       - SPRING_DATASOURCE_PASSWORD=12345
     restart: on-failure
