@@ -1,29 +1,29 @@
 version: "3.1"
 services:
   stats-server:
-    build: stat/stat-server
-    image: java-explore-with-me-stat-server
+    build: ewm-stats/stats-server
+    image: java-explore-with-me-stats-server
     container_name: statsApp
     ports:
       - "9090:9090"
     depends_on:
-      - stat-db
+      - stats-db
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://stat-db:5432/statDb
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://stats-db:5432/statsDb
       - SPRING_DATASOURCE_USERNAME=dbuser
       - SPRING_DATASOURCE_PASSWORD=12345
     restart: on-failure
 
 
-  stat-db:
+  stats-db:
     image: postgres:16.1
-    container_name: statDb
+    container_name: statsDb
     ports:
       - "5432:5432"
     volumes:
       - ./volumes/statsDb:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_DB=statDb
+      - POSTGRES_DB=statsDb
       - POSTGRES_USER=dbuser
       - POSTGRES_PASSWORD=12345
     healthcheck:
@@ -33,9 +33,9 @@ services:
       retries: 10
 
   main-server:
-    build: service
-    image: service
-    container_name: service
+    build: ewm-service
+    image: ewm-service
+    container_name: ewmService
     ports:
       - "8080:8080"
     depends_on:

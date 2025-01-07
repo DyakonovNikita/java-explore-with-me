@@ -9,13 +9,13 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>stat</artifactId>
+    <artifactId>ewm-stats</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>stat-model</module>
-        <module>stat-client</module>
-        <module>stat-server</module>
+        <module>stats-model</module>
+        <module>stats-client</module>
+        <module>stats-server</module>
     </modules>
 
     <build>
