@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS hits
     uri        VARCHAR,
     ip         VARCHAR,
     timestamp TIMESTAMP WITH TIME ZONE
-);
+                             );
