@@ -1,1 +1,1 @@
-https://github.com/DyakonovNikita/java-explore-with-me/pull/4
+https://github.com/DyakonovNikita/java-explore-with-me/pull/45
